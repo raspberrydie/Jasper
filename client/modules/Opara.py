@@ -11,7 +11,7 @@ from semantic.dates import DateService
 WORDS = ["BOSS"]
 
 def handle(text, mic, profile):
-	print("handling")
+	mic.say("Your boss is Eddie Opara")
 
 def isValid(text):
 	if "BOSS" in text:
