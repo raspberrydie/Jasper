@@ -21,10 +21,11 @@ def handle(text, mic, profile):
     w.search(query)
 
 def isValid(text):
-	if text != "":
-		print("checking wolf")
+    if text != "":
+	print("checking wolf")
         return True
-	print("skipping wolf")
+
+    print("skipping wolf")
     return False
 
 class wolfram(object):
