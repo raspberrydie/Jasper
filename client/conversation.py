@@ -53,7 +53,7 @@ class Conversation(object):
             else :
                 if transcribed:
                     print("doing wolf")
-                    self.brain.query(input)
+                    self.brain.query(transcribed)
                 else:
                     self.mic.say("Pardon?")
                     print ("nothing happened")
