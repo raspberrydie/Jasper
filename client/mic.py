@@ -86,11 +86,17 @@ class Mic:
 
         return THRESHOLD
 
-    def passiveListen(self, PERSONA = None):
+    def passiveListen(self, ):
         """
         Listens for PERSONA in everyday sound. Times out after LISTEN_TIME, so
         needs to be restarted.
         """
+        
+        '''
+            RAF EDIT: Removed listen for persona. Passive listen will wait for
+            any input and return the active listen
+        '''
+        
         print("entered passive")
 
         THRESHOLD_MULTIPLIER = 1.8
@@ -178,7 +184,6 @@ class Mic:
             wav_fp.writeframes(''.join(frames))
             wav_fp.close()
             f.seek(0)
-            # check if PERSONA was said
             transcribed = self.active_stt_engine.transcribe(f)
 
         '''

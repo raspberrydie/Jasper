@@ -31,7 +31,7 @@ class Conversation(object):
             threshold, transcribed = self.mic.passiveListen(self.persona)
             self._logger.debug("Stopped listening for keyword '%s'",
             self.persona)
-
+            '''
             if not transcribed or not threshold:
                 self._logger.info("Nothing has been said or transcribed.")
                 print("continue")
@@ -45,10 +45,15 @@ class Conversation(object):
             print("INPUT IS: ", input)
             self._logger.debug("Stopped to listen actively with threshold: %r",
                                 threshold)
+            '''
 
-            if input:
-                print("doing wolf")
-                self.brain.query(input)
-            else:
-                self.mic.say("Pardon?")
-                print ("nothing happened")
+            if not transcribed :
+                self._logger.info("Nothing has been said or transcribed.")
+                print("continue")
+            else :
+                if transcribed:
+                    print("doing wolf")
+                    self.brain.query(input)
+                else:
+                    self.mic.say("Pardon?")
+                    print ("nothing happened")
