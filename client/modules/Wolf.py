@@ -54,5 +54,10 @@ class wolfram(object):
         xml = self._get_xml(ip)
         result_dics = self._xmlparser(xml)
         #return result_dics 
-        #print result_dics
-        print result_dics['Result']
+        #printXml(result_dics)
+        print result_dics
+        #print result_dics['Result']
+
+    def printXml (result):
+        for item in result:
+            print item
