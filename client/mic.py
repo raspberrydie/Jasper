@@ -177,14 +177,17 @@ class Mic:
             wav_fp.close()
             f.seek(0)
             # check if PERSONA was said
-            transcribed = self.passive_stt_engine.transcribe(f)
+            transcribed = self.active_stt_engine.transcribe(f)
 
+        '''
         if any(PERSONA in phrase for phrase in transcribed):
             print("persona")
             return (THRESHOLD, PERSONA)
+        '''
 
-        print("no persona")
+        print("listened")
         return (False, transcribed)
+        #return transcribed
 
     def activeListen(self, THRESHOLD=None, LISTEN=True, MUSIC=False):
         """
