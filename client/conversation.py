@@ -45,7 +45,7 @@ class Conversation(object):
             #self._logger.debug("Stopped to listen actively with threshold: %r",
                                 #threshold)
 
-            if input and input != "[u' ']":
+            if input and input != "[u'']":
                 print("doing wolf")
                 self.brain.query(input)
             else:
