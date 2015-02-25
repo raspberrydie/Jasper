@@ -22,8 +22,8 @@ def handle(text, mic, profile):
 
 def isValid(text):
 	if text != "":
-        print("did wolf")
-		return True
+		print("checking wolf")
+        return True
     print("skipped wolf")
 	return False
 
