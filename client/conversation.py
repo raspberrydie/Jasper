@@ -45,7 +45,7 @@ class Conversation(object):
             self._logger.debug("Stopped to listen actively with threshold: %r",
                                 threshold)
 
-            if input
+            if input:
                 print("doing wolf")
                 self.brain.query(input)
             else:
