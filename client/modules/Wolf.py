@@ -24,8 +24,8 @@ def isValid(text):
 	if text != "":
 		print("checking wolf")
         return True
-    print("skipped wolf")
-	return False
+	print("skipping wolf")
+    return False
 
 class wolfram(object):
     def __init__(self, appid):
