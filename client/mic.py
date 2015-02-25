@@ -142,9 +142,11 @@ class Mic:
             data = stream.read(CHUNK)
             frames.append(data)
             score = self.getScore(data)
+            print("...")
 
             if score > THRESHOLD:
                 didDetect = True
+                print("FOUND")
                 break
 
         # no use continuing if no flag raised
