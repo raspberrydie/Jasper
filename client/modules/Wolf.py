@@ -21,10 +21,9 @@ def handle(text, mic, profile):
     w.search(query)
 
 def isValid(text):
-	return True
-	#if "WOLFRAM" in text:
-	#	return True
-	#return False
+	if text != "":
+		return True
+	return False
 
 class wolfram(object):
     def __init__(self, appid):
