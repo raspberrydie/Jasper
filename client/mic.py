@@ -96,8 +96,9 @@ class Mic:
             RAF EDIT: Removed listen for persona. Passive listen will wait for
             any input and return the active listen
         '''
-        
-        print("entered passive")
+        print("")
+        print("*************** ENTERED LISTENING MODE ***************")
+        print("")
 
         THRESHOLD_MULTIPLIER = 1.8
         RATE = 16000
@@ -148,7 +149,7 @@ class Mic:
             data = stream.read(CHUNK)
             frames.append(data)
             score = self.getScore(data)
-            print("...")
+            print(".",)
 
             if score > THRESHOLD:
                 didDetect = True
