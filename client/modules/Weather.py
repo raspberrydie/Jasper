@@ -162,7 +162,7 @@ def handle(text, mic, profile):
 
 
 def isValid(text):
-    return false
+    return False
     """
         Returns True if the text is related to the weather.
 
