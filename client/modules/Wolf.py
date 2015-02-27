@@ -22,10 +22,10 @@ def handle(text, mic, profile):
 
 def isValid(text):
     if text != "":
-	print("checking wolf")
+        #print("checking wolf")
         return True
 
-    print("skipping wolf")
+#print("skipping wolf")
     return False
 
 class wolfram(object):

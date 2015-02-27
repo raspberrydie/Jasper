@@ -156,6 +156,7 @@ class Mic:
             if score > THRESHOLD:
                 didDetect = True
                 print(" SOUND DETECTED")
+                print("")
                 break
 
         # no use continuing if no flag raised
@@ -164,6 +165,7 @@ class Mic:
             stream.stop_stream()
             stream.close()
             return (None, None)
+
 
         # cutoff any recording before this disturbance was detected
         frames = frames[-20:]

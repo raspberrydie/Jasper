@@ -52,7 +52,8 @@ class Conversation(object):
                 print("continue")
             else :
                 if transcribed:
-                    print("**************** SEARCHING FOR ANSWER ****************")
+                    print("")
+                    print("****** SEARCHING FOR ANSWER ******")
                     self.brain.query(transcribed)
                 else:
                     self.mic.say("Pardon?")
