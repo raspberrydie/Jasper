@@ -151,10 +151,11 @@ class Mic:
             frames.append(data)
             score = self.getScore(data)
             sys.stdout.write(".")
+            sys.stdout.flush()
 
             if score > THRESHOLD:
                 didDetect = True
-                print("FOUND")
+                print(" SOUND DETECTED")
                 break
 
         # no use continuing if no flag raised
@@ -194,7 +195,7 @@ class Mic:
             return (THRESHOLD, PERSONA)
         '''
 
-        print("listened")
+        #print("listened")
         return (False, transcribed)
         #return transcribed
 
