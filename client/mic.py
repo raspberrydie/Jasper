@@ -9,6 +9,7 @@ import audioop
 import pyaudio
 import alteration
 import jasperpath
+import sys
 
 
 class Mic:
@@ -149,8 +150,7 @@ class Mic:
             data = stream.read(CHUNK)
             frames.append(data)
             score = self.getScore(data)
-            print(".")
-            print("\r")
+            sys.stdout.write(".")
 
             if score > THRESHOLD:
                 didDetect = True
